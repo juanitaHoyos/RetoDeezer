@@ -2,6 +2,7 @@ package com.example.estudiante.retodeezer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.deezer.sdk.model.Album;
 import com.deezer.sdk.network.connect.DeezerConnect;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onResult(Object result, Object requestId) {
                 List<Album> albums = (List<Album>) result;
+                Log.e("DEEZER", "Albumes: "+albums.size() );
 
                 // do something with the albums
             }
